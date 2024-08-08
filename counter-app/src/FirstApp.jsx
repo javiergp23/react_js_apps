@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { PropTypes } from "prop-types"
 // const newMessage = "Hola Mundo!";
 // const getResult = (a, b) => {
@@ -5,13 +6,16 @@ import { PropTypes } from "prop-types"
 // };
 
 export const FirstApp = ({ title, value }) => {
+    const [count, setCount] = useState(100);
 
+    const handleClick = () => {
+        // setCount(count + 1);
+        setCount( (c) => count + 1);
+    }
     return( 
     <>
-        <h1>{value }</h1>
-        <div>Mensaje numero uno</div>
-        <div>Mensaje Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, aspernatur.</div>
-        <div>{ 1 + 1 }</div>
+        <h1>{count }</h1>
+        <button onClick={ handleClick}>+1</button>
     </>
     )
 }
