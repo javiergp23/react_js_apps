@@ -12,12 +12,15 @@ export const FirstApp = ({ title, value }) => {
         // setCount(count + 1);
         setCount( (c) => count + 1);
     }
+    const handleSubstract = () => setCount( (c) => count - 1);
+    const handleReset = () => setCount(value);
     return( 
     <>
-        <h1>{count }</h1>
+        <h1>Counter App</h1>
+        <h2>{count }</h2>
         <button onClick={ handleClick}>+1</button>
-        <button>+1</button>
-        <button>Reset</button>
+        <button onClick={ handleSubstract}>-1</button>
+        <button onClick={ handleReset}>Reset</button>
     </>
     )
 }
