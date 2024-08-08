@@ -6,7 +6,7 @@ import { PropTypes } from "prop-types"
 // };
 
 export const FirstApp = ({ title, value }) => {
-    const [count, setCount] = useState(100);
+    const [count, setCount] = useState(value);
 
     const handleClick = () => {
         // setCount(count + 1);
@@ -16,6 +16,8 @@ export const FirstApp = ({ title, value }) => {
     <>
         <h1>{count }</h1>
         <button onClick={ handleClick}>+1</button>
+        <button>+1</button>
+        <button>Reset</button>
     </>
     )
 }
